@@ -11,7 +11,15 @@ module.exports = {
     path: path.join(__dirname, '../dist')
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx']
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    alias: {
+      '@assets': path.join(__dirname, '../', 'assets/'),
+      '@src': path.join(__dirname, '../', 'src/'),
+      '@renderer': path.join(__dirname, '../', 'src/renderer/'),
+      '@pages': path.join(__dirname, '../', 'src/renderer/pages/'),
+      '@common': path.join(__dirname, '../', 'src/renderer/common/'),
+      '@utils': path.join(__dirname, '../', 'src/renderer/utils/')
+    }
   },
   module: {
     rules: [
@@ -27,7 +35,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: getCssLoaders(0)
+        use: ['style-loader', 'css-loader', 'postcss-loader']
       },
       {
         test: /\.less$/,
@@ -40,6 +48,26 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        // type 属性适用于 Webpack5，旧版本可使用 file-loader
+        type: 'asset/resource'
+        // use: [
+        //   {
+        //     loader: 'image-webpack-loader',
+        //     options: {
+        //       disable: process.env.NODE_ENV === 'development',
+        //       // jpeg 压缩配置
+        //       mozjpeg: {
+        //         quality: 80
+        //       },
+        //       optipng: {
+        //         quality: 100
+        //       }
+        //     }
+        //   }
+        // ]
       }
     ]
   },
