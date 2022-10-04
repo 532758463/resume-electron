@@ -21,6 +21,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.38.0
   autoprefixer: ^10.4.12
   babel-loader: ^8.2.5
+  classnames: ^2.3.2
   clean-webpack-plugin: ^4.0.0
   cross-env: ^7.0.3
   css-loader: ^6.7.1
@@ -65,6 +66,7 @@ dependencies:
   '@headlessui/react': registry.npmmirror.com/@headlessui/react/1.7.2_sfoxds7t5ydpegc3knd667wn6m
   '@heroicons/react': registry.npmmirror.com/@heroicons/react/2.0.11_react@17.0.2
   '@reduxjs/toolkit': registry.npmmirror.com/@reduxjs/toolkit/1.8.5_xiw2xh7zkwauncevrxklika6mu
+  classnames: registry.npmmirror.com/classnames/2.3.2
   react: registry.npmmirror.com/react/17.0.2
   react-dom: registry.npmmirror.com/react-dom/17.0.2_react@17.0.2
   react-redux: registry.npmmirror.com/react-redux/8.0.4_hydbvi6z6hlt2ijelr7vw43eem
@@ -2209,10 +2211,10 @@ packages:
     version: 0.7.31
     dev: true
 
-  registry.npmmirror.com/@types/node/14.18.31:
-    resolution: {integrity: sha512-vQAnaReSQkEDa8uwAyQby8bYGKu84R/deEc6mg5T8fX6gzCn8QW6rziSgsti1fNvsrswKUKPnVTi7uoB+u62Mw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/node/-/node-14.18.31.tgz}
+  registry.npmmirror.com/@types/node/16.11.64:
+    resolution: {integrity: sha512-z5hPTlVFzNwtJ2LNozTpJcD1Cu44c4LNuzaq1mwxmiHWQh2ULdR6Vjwo1UGldzRpzL0yUEdZddnfqGW2G70z6Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/node/-/node-16.11.64.tgz}
     name: '@types/node'
-    version: 14.18.31
+    version: 16.11.64
     dev: true
 
   registry.npmmirror.com/@types/node/18.7.23:
@@ -3709,6 +3711,12 @@ packages:
     version: 3.4.0
     dev: true
 
+  registry.npmmirror.com/classnames/2.3.2:
+    resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/classnames/-/classnames-2.3.2.tgz}
+    name: classnames
+    version: 2.3.2
+    dev: false
+
   registry.npmmirror.com/clean-css/5.3.1:
     resolution: {integrity: sha512-lCr8OHhiWCTw4v8POJovCoh4T7I9U11yVsPjMWWnnMmp9ZowCxyad1Pathle/9HjaDp+fdQKjO9fQydE6RHTZg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/clean-css/-/clean-css-5.3.1.tgz}
     name: clean-css
@@ -4808,7 +4816,7 @@ packages:
     version: 1.4.266
 
   registry.npmmirror.com/electron/18.3.15:
-    resolution: {integrity: sha512-mdSWM2iY/Bh5bKzd5drYS3mf8JWyR9P9UXZA2uLEZ+1fhgLEVkY9qu501QHoMsKlNwgn96EreQC+dfdQ75VTcA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/electron/-/electron-18.3.15.tgz}
+    resolution: {integrity: sha512-frkBt8skyo8SmlG4TbByDxZw6/tqttRYYIBaeTBfkoG18OyD59IVwVaXXHO8UYKB5/1C2Rce0Gj6uoxlAHQHzQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/electron/-/electron-18.3.15.tgz}
     name: electron
     version: 18.3.15
     engines: {node: '>= 8.6'}
@@ -4816,7 +4824,7 @@ packages:
     requiresBuild: true
     dependencies:
       '@electron/get': registry.npmmirror.com/@electron/get/1.14.1
-      '@types/node': registry.npmmirror.com/@types/node/14.18.31
+      '@types/node': registry.npmmirror.com/@types/node/16.11.64
       extract-zip: registry.npmmirror.com/extract-zip/1.7.0
     transitivePeerDependencies:
       - supports-color

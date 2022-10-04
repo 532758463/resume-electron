@@ -2,11 +2,11 @@ import React from 'react';
 // import Style from './index.module.less';
 import Logo from '@assets/logo.png';
 import { useHistory } from 'react-router-dom';
-import { isHttpOrHttpsUrl } from '@src/renderer/utils/router';
+import { isHttpOrHttpsUrl } from '@src/renderer/common/utils/router';
 import { ROUTER_KEY, ROUTER_ENTRY } from '@common/constants/router';
 import { shell } from 'electron';
-import fileAction from '@src/renderer/utils/file';
-import { getAppPath } from '@utils/appPath';
+import fileAction from '@src/renderer/common/utils/file';
+import { getAppPath } from '@src/renderer/common/utils/appPath';
 
 export const Root = () => {
   const history = useHistory();

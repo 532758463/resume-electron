@@ -31,7 +31,7 @@
         "./src/renderer/common/*"
       ],
       "@utils/*": [
-        "./src/renderer/utils/*"
+        "src/renderer/common/utils/*"
       ],
       "@hooks/*": [
         "./src/renderer/hooks/*"

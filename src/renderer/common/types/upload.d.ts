@@ -27,6 +27,10 @@ declare namespace TSUpload {
      * @description input change 回调事件，回传选中的文件列表
      */
     onAfterChange?: (fileList: File[]) => void;
+    /**
+     * @description 样式类名
+     */
+    className?:React.CSSProperties;
   }
 
   /**

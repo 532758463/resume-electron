@@ -17,7 +17,7 @@ function Router() {
         </Route>
       </Switch>
       {/* 默认重定向到首页 */}
-      <Redirect to={Routes.root} />
+      <Redirect to={Routes.resume} />
     </HashRouter>
   );
 }
