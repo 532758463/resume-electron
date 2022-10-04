@@ -10,7 +10,7 @@ const mainConfig = {
     path: path.resolve(__dirname, '../dist')
   },
   devtool: 'inline-source-map',
-  mode: 'development'
+  mode: process.env.NODE_ENV || 'development'
 };
 
 module.exports = webpackMerge.merge(baseConfig, mainConfig);

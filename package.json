@@ -2,20 +2,32 @@
   "name": "resume",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/main.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development electron ./dist/main.js",
     "build:main": "cross-env NODE_ENV=production webpack --config ./webpack/webpack.main.config.js",
-    "build:renderer": "webpack --config ./webpack/webpack.render.config.js",
+    "build:renderer": "cross-env NODE_ENV=production webpack --config ./webpack/webpack.render.config.js",
     "build": "run-p build:main build:renderer",
     "dev:main": "cross-env NODE_ENV=development webpack --config ./webpack/webpack.main.config.js --watch",
     "dev:renderer": "webpack serve --config ./webpack/webpack.render.config.js",
     "dev": "run-p dev:main dev:renderer",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix --quiet ./src"
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix --quiet ./src",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "build": {
+    "appId": "visResumeMook.ElectronReact",
+    "productName": "VisResumeMook",
+    "copyright": "Copyright © 2022",
+    "files": [
+      "dist/**/*",
+      "package.json",
+      "node_modules/"
+    ]
+  },
   "devDependencies": {
     "@babel/core": "^7.19.1",
     "@babel/node": "^7.16.8",
@@ -34,7 +46,8 @@
     "clean-webpack-plugin": "^4.0.0",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
-    "electron": "^17.4.11",
+    "electron": "^18.3.15",
+    "electron-builder": "^23.3.3",
     "electron-reloader": "^1.2.3",
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
@@ -68,8 +81,10 @@
     "@babel/polyfill": "^7.12.1",
     "@headlessui/react": "^1.7.2",
     "@heroicons/react": "^2.0.11",
+    "@reduxjs/toolkit": "^1.8.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-redux": "^8.0.4",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0"
   }
