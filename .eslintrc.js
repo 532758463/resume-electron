@@ -26,9 +26,7 @@ module.exports = {
     // 3. 注意要加上这一句，开启 prettier 自动修复的功能
     'prettier/prettier': 'error',
     'no-empty-function': 'off',
-    '@typescript-eslint/no-empty-function': {
-      allow: ['private-constructors']
-    },
+    '@typescript-eslint/no-empty-function': 0,
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
     '@typescript-eslint/no-var-requires': 0
