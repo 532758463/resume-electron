@@ -4,6 +4,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import ROUTER from '@common/constants/router';
+import { toPrintPdf } from '@utils/htmlToPdf';
 
 function ResumeAction() {
   const history = useHistory();
@@ -12,6 +13,9 @@ function ResumeAction() {
   // 导出PDF
   const onExport = () => {
     console.log('导出简历');
+    toPrintPdf({
+      resumeName: 'electron'
+    });
   };
 
   return (

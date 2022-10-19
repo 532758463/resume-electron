@@ -18,7 +18,7 @@ module.exports = {
       '@renderer': path.join(__dirname, '../', 'src/renderer/'),
       '@pages': path.join(__dirname, '../', 'src/renderer/pages/'),
       '@common': path.join(__dirname, '../', 'src/renderer/common/'),
-      '@utils': path.join(__dirname, '../', 'src/renderer/utils/'),
+      '@utils': path.join(__dirname, '../', 'src/renderer/common/utils/'),
       '@hooks': path.join(__dirname, '../', 'src/renderer/hooks/'),
       '@redux': path.join(__dirname, '../', 'src/renderer/redux/')
     }
