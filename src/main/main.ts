@@ -1,4 +1,5 @@
-import { app, BrowserWindow, ipcMain } from 'electron';
+import { app, BrowserWindow, ipcMain, Menu } from 'electron';
+import customMenu from './customMenu';
 import path from 'path';
 
 function createWindow() {
@@ -14,6 +15,8 @@ function createWindow() {
     }
   });
   const ROOT_PATH = path.join(app.getAppPath(), '../');
+  const menu = Menu.buildFromTemplate(customMenu);
+  Menu.setApplicationMenu(menu);
 
   win.on('show', () => {
     win.webContents.openDevTools();
